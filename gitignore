@@ -1,0 +1,17 @@
+# Python
+*.py[cod]
+.venv/*
+__pycache__/*
+*.pyc
+*.log
+
+# PostgreSQL Dumps
+*.sql
+
+# docker
+docker-compose.*
+
+# Other
+.DS_store
+.env
+.idea/

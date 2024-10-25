@@ -1,0 +1,23 @@
+version: '3'
+services:
+  app:
+    build: .
+    environment:
+      POSTGRESQL_SERVER: server
+      POSTGRESQL_USER: user
+      POSTGRESQL_PASSWORD: password
+      POSTGRESQL_DATABASE: database
+      POSTGRESQL_PORT: port
+      API_BASE_URL: api_url
+    command: python main.py 
+
+  test:
+    build: .
+    environment:
+      POSTGRESQL_SERVER: server
+      POSTGRESQL_USER: user
+      POSTGRESQL_PASSWORD: password
+      POSTGRESQL_DATABASE: database
+      POSTGRESQL_PORT: port
+      API_BASE_URL: api_url
+    command: pytest tests/
